@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #4d8fe6;
+    color: #222;
+    padding: 30px;
+}
+
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Header */
+
+header {
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+header h1:hover{ color: #04c8eb;
+
+}
+
+header p {
+    opacity: 0.9;
+}
+
+
+/* Form */
+
+.form-section,
+.result-section {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #1e3a8a;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #1e3a8a;
+    padding-bottom: 8px;
+}
+
+.input-grid,
+.marks-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box label {
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.input-box input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+}
+
+.input-box input:focus {
+    border-color: #1e3a8a;
+}
+
+
+/* Button */
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #162d6b;
+}
+
+
+/* Student information */
+
+.student-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.student-info p {
+    background: #f4f6fa;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+
+/* Table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 13px;
+    text-align: center;
+}
+
+th {
+    background: #1e3a8a;
+    color: white;
+}
+
+td {
+    background: #fafafa;
+}
+
+
+/* Summary */
+
+.result-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.result-summary div {
+    text-align: center;
+    padding: 18px 10px;
+    background: #eef3ff;
+    border-radius: 8px;
+}
+
+.result-summary h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.result-summary p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+
+/* Print */
+
+.print-btn {
+    margin-top: 25px;
+    background: #16a34a;
+}
+
+.print-btn:hover {
+    background: #15803d;
+}
+
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    .input-grid,
+    .marks-grid,
+    .student-info {
+        grid-template-columns: 1fr;
+    }
+
+    .result-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .result-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .form-section,
+    .result-section {
+        padding: 20px;
+    }
+}

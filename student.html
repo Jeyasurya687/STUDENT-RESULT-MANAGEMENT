@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Management System</title>
+    <link rel="stylesheet" href="student.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Student Result Management System</h1>
+            <p>Enter student details and marks to generate the result</p>
+        </header>
+
+        <section class="form-section">
+
+            <h2>Student Details</h2>
+
+            <div class="input-grid">
+
+                <div class="input-box">
+                    <label>Student Name</label>
+                    <input type="text" id="studentName" placeholder="Enter student name">
+                </div>
+
+                <div class="input-box">
+                    <label>Register Number</label>
+                    <input type="text" id="registerNumber" placeholder="Enter register number">
+                </div>
+
+                <div class="input-box">
+                    <label>Class</label>
+                    <input type="text" id="studentClass" placeholder="Enter class">
+                </div>
+
+                <div class="input-box">
+                    <label>Department</label>
+                    <input type="text" id="department" placeholder="Enter department">
+                </div>
+
+            </div>
+
+            <h2>Subject Marks</h2>
+
+            <div class="marks-grid">
+
+                <div class="input-box">
+                    <label>HTML</label>
+                    <input type="number" id="html" min="0" max="100" placeholder="0 - 100">
+                </div>
+
+                <div class="input-box">
+                    <label>CSS</label>
+                    <input type="number" id="css" min="0" max="100" placeholder="0 - 100">
+                </div>
+
+                <div class="input-box">
+                    <label>JavaScript</label>
+                    <input type="number" id="javascript" min="0" max="100" placeholder="0 - 100">
+                </div>
+
+                <div class="input-box">
+                    <label>Database</label>
+                    <input type="number" id="database" min="0" max="100" placeholder="0 - 100">
+                </div>
+
+                <div class="input-box">
+                    <label>Computer Science</label>
+                    <input type="number" id="computer" min="0" max="100" placeholder="0 - 100">
+                </div>
+
+            </div>
+
+            <button onclick="generateResult()">Generate Result</button>
+
+        </section>
+
+
+        <!-- Result -->
+
+        <section class="result-section" id="resultSection">
+
+            <h2>Student Result</h2>
+
+            <div class="student-info">
+
+                <p><strong>Name:</strong> <span id="resultName"></span></p>
+
+                <p><strong>Register Number:</strong>
+                    <span id="resultRegister"></span>
+                </p>
+
+                <p><strong>Class:</strong>
+                    <span id="resultClass"></span>
+                </p>
+
+                <p><strong>Department:</strong>
+                    <span id="resultDepartment"></span>
+                </p>
+
+            </div>
+
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Marks</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>HTML</td>
+                        <td id="resultHTML">0</td>
+                        <td id="statusHTML">-</td>
+                    </tr>
+
+                    <tr>
+                        <td>CSS</td>
+                        <td id="resultCSS">0</td>
+                        <td id="statusCSS">-</td>
+                    </tr>
+
+                    <tr>
+                        <td>JavaScript</td>
+                        <td id="resultJS">0</td>
+                        <td id="statusJS">-</td>
+                    </tr>
+
+                    <tr>
+                        <td>Database</td>
+                        <td id="resultDB">0</td>
+                        <td id="statusDB">-</td>
+                    </tr>
+
+                    <tr>
+                        <td>Computer Science</td>
+                        <td id="resultComputer">0</td>
+                        <td id="statusComputer">-</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+
+            <div class="result-summary">
+
+                <div>
+                    <h3>Total Marks</h3>
+                    <p id="totalMarks">0 / 500</p>
+                </div>
+
+                <div>
+                    <h3>Percentage</h3>
+                    <p id="percentage">0%</p>
+                </div>
+
+                <div>
+                    <h3>Grade</h3>
+                    <p id="grade">-</p>
+                </div>
+
+                <div>
+                    <h3>Result</h3>
+                    <p id="finalResult">-</p>
+                </div>
+
+            </div>
+
+            <button class="print-btn" onclick="window.print()">
+                Print Result
+            </button>
+
+        </section>
+
+    </div>
+
+    <script src="student.js"></script>
+
+</body>
+</html>
